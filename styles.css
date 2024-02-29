@@ -58,11 +58,12 @@ footer {
 section.main-info {
   width: 100%;
   border-radius: 1rem;
-  box-shadow: 2px 4px 8px 24px rgba(0, 0, 0, 0.16);
+  box-shadow: 2px 4px 24px 4px rgba(0, 0, 0, 0.16);
   display: flex;
   flex-wrap: wrap;
   padding: 1rem;
   margin-bottom: 0.5rem;
+  position: relative;
   z-index: 0;
 }
 section.main-info .user-image {
@@ -149,8 +150,8 @@ section.main-info .details div img {
 }
 
 .buttons {
-  z-index: 2;
   position: relative;
+  z-index: 2;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -180,7 +181,7 @@ section.main-info .details div img {
   bottom: -100%;
   border-radius: 1rem 1rem 0 0;
   background: #fff;
-  box-shadow: 2px 4px 8px 24px rgba(0, 0, 0, 0.16);
+  box-shadow: 2px 4px 24px 4px rgba(0, 0, 0, 0.16);
   z-index: 9999;
   overflow: hidden;
   display: flex;
@@ -219,4 +220,44 @@ section.main-info .details div img {
 .details-modal button div:first-child {
   transform: rotate(-45deg);
   margin-bottom: -4px;
+}
+
+.card-modal {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+  min-width: 100dvw;
+  max-width: 100dvw;
+  min-height: 100dvh;
+  max-height: 100dvh;
+  background: white;
+  z-index: 99999;
+  padding: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+.card-modal .out {
+  display: none;
+}
+.card-modal.open > .out {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+}
+.card-modal.open {
+  bottom: 0;
+}
+.card-modal img {
+  scroll-snap-align: start;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=styles.css.map */

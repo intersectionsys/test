@@ -1,4 +1,4 @@
-$boxShadow:2px 4px 8px 24px rgba(0, 0, 0, 0.16);
+$boxShadow:2px 4px 24px 4px rgba(0, 0, 0, 0.16);
 
 * {
   margin: 0;
@@ -71,6 +71,7 @@ section.main-info {
   flex-wrap: wrap;
   padding: 1rem;
   margin-bottom: .5rem;
+  position: relative;
   z-index: 0;
 
   .user-image {
@@ -167,8 +168,8 @@ section.main-info {
 }
 
 .buttons {
-  z-index: 2;
   position: relative;
+  z-index: 2;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -246,5 +247,52 @@ section.main-info {
       }
 
     }
+  }
+}
+
+.card-modal {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+  min-width: 100dvw;
+  max-width: 100dvw;
+  min-height: 100dvh;
+  max-height: 100dvh;
+  background: white;
+  z-index: 99999;
+  padding: 1rem;
+
+  .out {
+    display: none;
+  }
+
+  &.open>.out {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    width: 100px;
+    height: 100px;
+  }
+
+  &.open {
+    bottom: 0;
+  }
+
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+
+  img {
+    scroll-snap-align: start;
+    width: 100%;
+    height: 100%;
+    // height: 100;
+    object-fit: cover;
   }
 }
