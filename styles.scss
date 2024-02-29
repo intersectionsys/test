@@ -59,7 +59,7 @@ main {
 footer {
   margin-top: 1.5rem;
   font-size: .75rem;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
   color: #999;
 }
 
@@ -138,7 +138,7 @@ section.main-info {
 .dots {
   display: flex;
   gap: .25rem;
-  margin: 2rem auto .75rem;
+  margin: 2rem auto 2.5rem;
 
   >div {
     border-radius: 100%;
@@ -158,7 +158,7 @@ section.main-info {
   max-height: 120px;
   // height: 50px;
   background: #000;
-  margin-top: auto;
+  // margin-top: auto;
 
   img {
     width: 100%;
@@ -174,7 +174,7 @@ section.main-info {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 1rem;
-  // margin-bottom: .75rem;
+  margin-bottom: auto;
   padding: 0 1.5rem;
 
   button {
@@ -272,7 +272,10 @@ section.main-info {
   }
 
   &.open>.out {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: red;
     position: fixed;
     bottom: 0;
     left: 0;

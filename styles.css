@@ -51,7 +51,7 @@ main {
 footer {
   margin-top: 1.5rem;
   font-size: 0.75rem;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
   color: #999;
 }
 
@@ -124,7 +124,7 @@ section.main-info .details div img {
 .dots {
   display: flex;
   gap: 0.25rem;
-  margin: 2rem auto 0.75rem;
+  margin: 2rem auto 2.5rem;
 }
 .dots > div {
   border-radius: 100%;
@@ -140,7 +140,6 @@ section.main-info .details div img {
   width: 100%;
   max-height: 120px;
   background: #000;
-  margin-top: auto;
 }
 .pannel img {
   width: 100%;
@@ -156,6 +155,7 @@ section.main-info .details div img {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 1rem;
+  margin-bottom: auto;
   padding: 0 1.5rem;
 }
 .buttons button {
@@ -244,7 +244,10 @@ section.main-info .details div img {
   display: none;
 }
 .card-modal.open > .out {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: red;
   position: fixed;
   bottom: 0;
   left: 0;
