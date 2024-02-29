@@ -13,7 +13,7 @@ body {
 }
 
 header {
-  padding-top: 1.5rem;
+  height: 3.5rem;
   background-color: #1E4A93;
   padding: 1rem;
   font-weight: 600;
@@ -58,7 +58,7 @@ footer {
 section.main-info {
   width: 100%;
   border-radius: 1rem;
-  box-shadow: 2px 4px 8px 32px rgba(0, 0, 0, 0.16);
+  box-shadow: 2px 4px 8px 24px rgba(0, 0, 0, 0.16);
   display: flex;
   flex-wrap: wrap;
   padding: 1rem;
@@ -180,7 +180,7 @@ section.main-info .details div img {
   bottom: -100%;
   border-radius: 1rem 1rem 0 0;
   background: #fff;
-  box-shadow: 2px 4px 8px 32px rgba(0, 0, 0, 0.16);
+  box-shadow: 2px 4px 8px 24px rgba(0, 0, 0, 0.16);
   z-index: 9999;
   overflow: hidden;
   display: flex;
